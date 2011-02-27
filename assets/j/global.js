@@ -277,12 +277,12 @@ $(document).ready(function() {
 	}
 
 
-	$('.shout-out .close').click(function() {
-        $('.shout-out').hide();
-		$.cookie("mobile-app","false", { path: '/'});
-    });
+	// $('.shout-out .close').click(function() {
+    //     $('.shout-out').hide();
+// 		$.cookie("mobile-app","false", { path: '/'});
+  //   });
 
-	var mobileAppCookie = $.cookie("mobile-app");
-	mobileAppCookie == "false" ? $('.shout-out').hide() : $('.shout-out').show();
+	// var mobileAppCookie = $.cookie("mobile-app");
+	// mobileAppCookie == "false" ? $('.shout-out').hide() : $('.shout-out').show();
 
 });
