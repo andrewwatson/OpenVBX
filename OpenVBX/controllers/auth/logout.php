@@ -43,6 +43,7 @@ class Logout extends MY_Controller
 		
 		$this->session->sess_destroy();
 		$this->session->set_userdata('loggedin', false);
+		$this->session->set_userdata('user_id',0);
 		
 		$data = array('error' => 'You have been logged out.',
 					  'redirect' => '',

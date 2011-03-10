@@ -101,6 +101,7 @@ class Login extends MY_Controller
 								  'is_admin' => $user->is_admin,
 								  'loggedin' => TRUE,
 								  'signature' => VBX_User::signature($user->id),
+									'tenant' => $user->tenant_id
 								  );
 				
 				$this->session->set_userdata($userdata);

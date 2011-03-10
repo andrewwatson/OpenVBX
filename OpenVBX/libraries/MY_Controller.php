@@ -87,7 +87,7 @@ class MY_Controller extends Controller
 		$this->testing_mode = !empty($_REQUEST['vbx_testing_key'])? $_REQUEST['vbx_testing_key'] == $this->config->item('testing-key') : false;
 		if($this->tenant)
 		{
-			$this->config->set_item('sess_cookie_name', $this->tenant->id . '-' . $this->config->item('sess_cookie_name'));
+			$this->config->set_item('sess_cookie_name',  $this->config->item('sess_cookie_name'));
 			$this->load->library('session');
 			$this->twilio_sid = $this->settings->get('twilio_sid', $this->tenant->id);
 			$this->twilio_token = $this->settings->get('twilio_token', $this->tenant->id);
@@ -124,7 +124,23 @@ class MY_Controller extends Controller
 		foreach ($styles as $style) {
 			if ($style) $this->template->add_css("assets/c/$style");
 		}
+
+		// EXPERIMENTAL
+
+		$CI = &get_instance();
+		$user_id = $CI->session->userdata('user_id');
+		$user_tenant = $CI->session->userdata('tenant');
+
+		if( $user_id != 0) {
+
+			if( $this->tenant->id != $user_tenant ) {
+				$tmp_tenant = $CI->settings->get_tenant_by_id( $user_tenant );
+				redirect( $CI->config->slash_item('base_url'). $tmp_tenant->url_prefix);
+			}
+		}
+		
 	}
+
 
 	protected function set_request_method($method = null)
 	{

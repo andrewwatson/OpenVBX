@@ -104,9 +104,14 @@ class MY_Model extends Model
 		}
 
 		/* Tenantize */
-		$ci = &get_instance();
-		$search_options["`{$table}`.tenant_id"] = $ci->tenant->id;
-		
+
+		$user_id = $ci->session->userdata('user_id');
+		$tenant_id = $ci->session->userdata('tenant');
+
+		if ($user_id != 0) {
+			$search_options["`{$table}`.tenant_id"] = $tenant_id;
+		}
+
 		foreach($search_options as $option => $value)
 		{
 			if(preg_match('/([^_]+)__like_?(before|after|both)$/', $option, $side_match))
