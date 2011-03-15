@@ -280,7 +280,7 @@ class MY_Controller extends Controller
 
 				$nav['admin_links'] = array(
 										   'flows' => 'Flows',
-										   'numbers' => 'Numbers',
+										   // 'numbers' => 'Numbers',
 										   'accounts' => 'Users'
 										   );
 
