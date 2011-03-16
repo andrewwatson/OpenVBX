@@ -1,5 +1,5 @@
 {
-    "name" : "Conference",
+    "name" : "Conference Call",
     "description" : "Drop people into a conference.",
     "type" : "voice",
 	"order" : 4

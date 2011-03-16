@@ -1,5 +1,5 @@
 {
-    "name" : "Greeting",
+    "name" : "Announcement",
     "description" : "Send a greeting to the caller.",
     "type" : "voice"
 }
