@@ -188,14 +188,14 @@ class Plugin
 				/* throw exception? */
 			}
 
-			if(in_array($menu, $standard_menu_options))
-			{
-				$nav[$menu.'_links']["p/$url"] = $label;
-			}
-			else
-			{
-				$nav['plugin_menus'][strtolower($menu)]["p/$url"] = $label;
-			}
+         if (!(isset($link->master) && $tenant_id != 1 )) {
+            if(in_array($menu, $standard_menu_options)) {
+               $nav[$menu.'_links']["p/$url"] = $label;
+            } else {
+               $nav['plugin_menus'][strtolower($menu)]["p/$url"] = $label;
+            }
+         }
+
 		}
 		
 		return $nav;
