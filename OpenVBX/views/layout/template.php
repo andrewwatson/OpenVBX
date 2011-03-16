@@ -10,6 +10,8 @@
 	<link type="text/css" rel="stylesheet" href="<?php echo ASSET_ROOT ?>/<?php echo $link ?>.css" />
 	<?php endforeach; ?>
 
+	<link type="text/css" rel="stylesheet" href="<?php echo ASSET_ROOT ?>/c/vcx.css" />
+
 	<!--[if IE 7]>
 		<link type="text/css" rel="stylesheet" href="<?php echo ASSET_ROOT ?>/c/ie.css" />
 	<![endif]-->

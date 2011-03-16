@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+   background-image: url(/assets/i/bodyfill.jpg);
+   background-repeat: repeat-x;
+   background-position: 0px -135px;
+}
+
+#openvbx-logo a {
+background-color:transparent !important;
+background-image:url("/assets/i/logo.png") !important;
+background-position:center -30;
+background-repeat:no-repeat;
+background-position:-60px -30px;
+display:block;
+height:100px;
+margin:0;
+}
+
+.vbx-util-item a {
+   background-color:transparent !important;
+}
+
+.wrapper {
+   #background-repeat: no-repeat;
+   background-position: right -50px;
+   background-color: transparent;
+}
+.login-wrapper{
+   #background-image: url(/assets/i/logo.png);
+   background-repeat: no-repeat;
+   background-position: center -50px;
+   background-color: transparent;
+}
+#openvbx-logo {
+   background-image: none;
+}
+
+ul, body,html {
+   margin: 0px;
+}
+
+.login-wrapper #openvbx-logo a {
+background-position:-40px 0 !important;
+height:140px !important;
+width:100% !important;
+}
+
