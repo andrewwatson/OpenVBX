@@ -39,7 +39,10 @@ $(document).ready(function() {
 	});
 	
 	$('button.add').click(function() {
-		$('#dlg_add').dialog('open');
+		// $('#dlg_add').dialog('open');
+		// document.location.href = "/p/VoiceCloud/";
+		document.location.href = OpenVBX.home + '/p/VoiceCloud';
+
 	});
 	
 	$('select[name=flow_id]').change(function(e) {
