@@ -196,7 +196,7 @@ class MY_Controller extends Controller
 		return;
 	}
 
-	protected function get_navigation($logged_in, $is_admin)
+	protected function get_navigation($logged_in, $is_admin, $tenant_id)
 	{
 		$nav = array();
 		$nav['util_links'] = array();
@@ -355,7 +355,7 @@ class MY_Controller extends Controller
 		}
 
 		$navigation = $this->get_navigation($this->session->userdata('loggedin'),
-											$this->session->userdata('is_admin'));
+											$this->session->userdata('is_admin'), $this->tenant->id);
 		$payload = array_merge($payload, $navigation);
 		$payload = $this->template->clean_output($payload);
 

@@ -146,7 +146,7 @@ class Plugin
 		}
 	}
 	
-	public function getLinks()
+	public function getLinks($tenant_id = 0)
 	{
 		$nav = array();
 		
