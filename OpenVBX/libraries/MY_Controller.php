@@ -332,7 +332,7 @@ class MY_Controller extends Controller
 		if(!$theme_config)
 		{
 			$theme_config = array();
-			$theme_config['site_title'] = 'VBX';
+			$theme_config['site_title'] = 'VoiceCloud VCX';
 		}
 
 		$payload['session_id'] = $this->session->userdata('session_id');
