@@ -45,5 +45,5 @@ function openvbx_mail($recipient, $subject, $template, $maildata = array())
 		error_log($message);
 	}
 
-	return mail($recipient, "[OpenVBX] " . $subject, $message, $headers);
+	return mail($recipient, "[VoiceCloud VCX] " . $subject, $message, $headers);
 }
