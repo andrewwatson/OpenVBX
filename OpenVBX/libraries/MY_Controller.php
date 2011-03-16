@@ -215,7 +215,7 @@ class MY_Controller extends Controller
 		{
 			try
 			{
-				$plugin_links = array_merge_recursive($plugin_links, $plugin->getLinks());
+				$plugin_links = array_merge_recursive($plugin_links, $plugin->getLinks($tenant_id));
 			}
 			catch(PluginException $e)
 			{
@@ -425,6 +425,10 @@ class MY_Controller extends Controller
 	{
 		return $this->tenant;
 	}
+   public function getUser()
+   {
+      return $this->user_id;
+   }
 }
 
 require_once 'User_Controller.php';
