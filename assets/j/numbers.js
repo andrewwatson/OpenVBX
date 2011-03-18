@@ -41,7 +41,7 @@ $(document).ready(function() {
 	$('button.add').click(function() {
 		// $('#dlg_add').dialog('open');
 		// document.location.href = "/p/VoiceCloud/";
-		document.location.href = OpenVBX.home + '/p/VoiceCloud';
+		document.location.href = OpenVBX.home + '/p/VoiceCloudNumbers';
 
 	});
 	
