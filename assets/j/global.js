@@ -115,7 +115,7 @@ OpenVBX = {home: null, assets: null};
 
 $(document).ready(function() {
 	// set full links to allow for relative paths
-    OpenVBX.home = $('#openvbx-logo a').eq(0).attr('href'); 
+    OpenVBX.home = $('#openvbx-logo a').eq(0).attr('href') + "/"; 
     OpenVBX.assets = $('#openvbx-assets a').eq(0).attr('href');
 
 	$('button').mouseover(function() {
