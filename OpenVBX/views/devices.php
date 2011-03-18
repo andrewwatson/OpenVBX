@@ -83,7 +83,6 @@
 			<p>No devices setup.</p>
 		</div><!-- .no-devices -->
 
-		<a href="#" name="mobile-apps" class="mobile-apps-toggle-link">More for your device</a>
 
 		</div><!-- .device-container -->
 		</form>
@@ -91,15 +90,6 @@
 
 		<div class="application-container">
 			<div class="application">
-				<img class="app-icon" src="<?php echo ASSET_ROOT ?>/i/iphone-icon-58.png" alt="OpenVBX for iPhone" />
-				<h4 class="app-name">OpenVBX for iPhone</h4>
-				<p class="app-desc">Get the OpenVBX iPhone app and be
-				able to access your voicemail, make calls and send text messages on the go. </p>
-				<form>
-					<fieldset class="vbx-input-container">
-						<button class="email-button"><span>Start the Quick Install</span></button>
-					</fieldset>
-				</form>
 			</div><!-- .application -->
 		</div><!-- .application-container -->
 
