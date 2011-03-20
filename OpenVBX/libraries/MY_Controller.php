@@ -246,10 +246,12 @@ class MY_Controller extends Controller
 
 			$nav['setup_links'] = array();
 
+	/*
 		    $nav['setup_links'] = array(
 								   'devices' => 'Phones',
 								   'voicemail' => 'Voicemail',
 								   );
+	*/
 
 			if(!empty($plugin_links['setup_links']))
 			{
