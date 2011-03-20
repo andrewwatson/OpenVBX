@@ -278,8 +278,8 @@ class MY_Controller extends Controller
 				}
 
 				$nav['admin_links'] = array(
-										   'flows' => 'Flows',
-										   // 'numbers' => 'Numbers',
+										   'flows' => 'Current Flows',
+										   'numbers' => 'Assign Call Flows',
 										   'accounts' => 'Users'
 										   );
 
