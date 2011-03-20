@@ -15,14 +15,6 @@
 				<input type="text" id="iEmail" class="medium" name="email" />
 			</label>
 
-			<div class="single-existing-number">
-			<label class="field-label" for="iDeviceNumber">Existing Mobile or Land-line Number
-				<input type="hidden" name="device_id" value="" />
-				<input type="text" id="iDeviceNumber" class="medium" name="device_number" />
-				<span style="font-style: italic; font-size: 11px;">When a call is routed to this person, this is the number that will be called.</span>
-			</label>
-			</div>
-			
 			<div class="multiple-existing-numbers">
 				<br />
 				<p>This person has multiple devices configured.  They'll<br />need to login to their account, and open My Account<br />to add or remove devices.</p>
