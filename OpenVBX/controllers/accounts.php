@@ -206,17 +206,6 @@ class Accounts extends User_Controller {
 		$device_number = trim($this->input->post('device_number'));
                 $shouldSendWelcome = false;
 
-		try
-		{
-			PhoneNumber::validatePhoneNumber($device_number);
-		}
-		catch(PhoneNumberException $e)
-		{
-			$data['json'] = array('error' => true,
-								  'message' => $e->getMessage());
-			return $this->respond('', 'accounts', $data);
-		}
-
 		if(!empty($auth_type))
 		{
 			$auth_type = $this->vbx_user->get_auth_type($auth_type);
