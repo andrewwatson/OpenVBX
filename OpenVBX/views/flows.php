@@ -16,7 +16,6 @@
 			<thead>
 				<tr class="items-head">
 					<th class="flow-name">Name</th>
-					<th class="flow-numbers">Phone Numbers</th>
 					<th class="flow-voice">Call Flow</th>
 					<th class="flow-sms">SMS Flow</th>
 					<th class="flow-delete">Delete</th>
@@ -26,11 +25,6 @@
 				<?php foreach($items as $item): ?>
 				<tr id="flow-<?php echo $item['id']?>" class="items-row <?php if(in_array($item['id'], $highlighted_flows)): ?>highlight-row<?php endif; ?>">
 					<td><?php echo $item['name'] ?></td>
-					<?php if(empty($item['numbers'])): ?>
-					<td>None</td>
-					<?php else: ?>
-					<td><?php echo implode(', ', $item['numbers']); ?></td>
-					<?php endif; ?>
 					<td><a href="<?php echo site_url("flows/edit/{$item['id']}"); ?>#flowline/start"><?php echo is_null($item['voice_data'])? 'Create' : 'Edit' ?> Call Flow</a></td>
 					<td><a href="<?php echo site_url("flows/sms/{$item['id']}"); ?>#flowline/start"><?php echo is_null($item['sms_data'])? 'Create' : 'Edit' ?> SMS Flow</a></td>
 					<td><a href="flows/edit/<?php echo $item['id'];?>" class="trash action" title="Delete"><span class="replace">Delete</span></a></td>

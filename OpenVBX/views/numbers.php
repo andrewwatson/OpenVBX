@@ -1,13 +1,7 @@
 <div class="vbx-content-main">
 
 	<div class="vbx-content-menu vbx-content-menu-top">
-		<h2 class="vbx-content-heading">Phone Numbers</h2>
-		<?php if((count($items) < 1 || count($items) == 1 && $items[0]['id'] == 'Sandbox')): ?>
-		<?php else: ?>
-		<ul class="phone-numbers-menu vbx-menu-items-right">
-			<li class="menu-item"><button class="add-button add number"><span>Get a Number</span></button></li>
-		</ul>
-		<?php endif; ?>
+		<h2 class="vbx-content-heading">Assign Call Flows</h2>
 	</div><!-- .vbx-content-menu -->
 
 
@@ -44,9 +38,6 @@
 							<span class="status"><?php echo $item['status'] ?></span>
 						</td>
 						<td class="incoming-number-delete">
-							<?php if(empty($item['pin'])): ?>
-							<a href="numbers/delete/<?php echo $item['id']; ?>" class="action trash delete"><span class="replace">Delete</span></a>
-							<?php endif; ?>
 						</td>
 					</tr>
 					<?php endforeach; ?>
