@@ -147,14 +147,14 @@ class Login extends MY_Controller
 					if(empty($twilio_numbers))
 					{
 						$banner = array('id' => 'first-login',
-										'html' => 'To start setting up OpenVBX, we suggest you start out with building your first <a href="'.site_url('flows').'">call flow</a>. ',
+										'html' => 'To start setting up VoiceCloud VCX, we suggest you start out with building your first <a href="'.site_url('flows').'">call flow</a>. ',
 										'title' => 'Welcome to OpenVBX');
 						setrawcookie('banner',
 									 rawurlencode(json_encode($banner)),
 									 0,
 									 '/'.(($this->tenant->id > 1)? $this->tenant->name : '')
 									 );
-						return redirect('numbers');
+						return redirect('p/VoiceCloudNumbers');
 					}
 				}
 				catch(VBX_IncomingNumberException $e)
@@ -164,11 +164,14 @@ class Login extends MY_Controller
 				}
 			}
 
+		/*
 			$devices = VBX_Device::search(array('user_id' => $user->id));
 			if(empty($devices))
 			{
 				return redirect('devices');
 			}
+		*/
+
 		}
 
 		return $this->redirect($redirect);
