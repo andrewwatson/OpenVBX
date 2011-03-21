@@ -8,6 +8,7 @@
 #vbx-util-menu .vbx-util-item {
     display: inline;
     float: left;
+	font-weight: bold;
 }
 
 #vbx-util-menu .vbx-util-item a {
