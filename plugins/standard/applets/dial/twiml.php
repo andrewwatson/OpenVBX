@@ -23,8 +23,9 @@ $version = AppletInstance::getValue('version', null);
 /* Get current instance	 */
 $dial_whom_selector = AppletInstance::getValue('dial-whom-selector');
 $dial_whom_user_or_group = AppletInstance::getUserGroupPickerValue('dial-whom-user-or-group');
-$dial_whom_number = AppletInstance::getValue('dial-whom-number');
+$dial_whom_selector = "number";
 
+$dial_whom_number = AppletInstance::getValue('dial-whom-number');
 
 $no_answer_action = AppletInstance::getValue('no-answer-action', 'hangup');
 $no_answer_group_voicemail = AppletInstance::getAudioSpeechPickerValue('no-answer-group-voicemail');

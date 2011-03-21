@@ -247,7 +247,7 @@ class MY_Controller extends Controller
 			$nav['setup_links'] = array();
 
 		    $nav['setup_links'] = array(
-								   'devices' => 'Phones'
+								   // 'devices' => 'Phones'
 								   );
 
 			if(!empty($plugin_links['setup_links']))
@@ -278,7 +278,7 @@ class MY_Controller extends Controller
 				}
 
 				$nav['admin_links'] = array(
-										   'flows' => 'Current Flows',
+										   'flows' => 'Current Call Flows',
 										   'numbers' => 'Assign Call Flows',
 										   'accounts' => 'Users'
 										   );
