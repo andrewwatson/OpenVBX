@@ -98,7 +98,8 @@
 }
 
 .flow-editor-wrapper #vbx-context-menu .vbx-menu-items-right {
-    float: right;
+    float: left;
+	 margin-left: 25px;
 }
 
 .flow-editor-wrapper #vbx-context-menu .menu-item {
