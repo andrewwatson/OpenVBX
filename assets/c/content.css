@@ -138,7 +138,8 @@
 }
 
 .vbx-content-menu .vbx-menu-items-right {
-    float: right;
+    float: left;
+	margin-left: 25px;
 }
 
 .vbx-content-menu .menu-item {
