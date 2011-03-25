@@ -48,7 +48,6 @@ if(isset($flow_data)) printf('<script type="text/javascript">var flow_data = %s;
 							<h2 class="applet-name"><?php echo ($editor_type == 'voice')? $applet->voice_title : (($editor_type == 'sms')? $applet->sms_title : $applet->title); ?></h2>
 							<div class="settings-panel vbx-applet">
 								<?php echo $template ?>
-								<a class="view-source" target="_new" href="<?php echo site_url('twiml/applet/'.$editor_type.'/'.$flow->id.'/'.$instance->id) ?>">View TwiML</a>
 							</div><!-- .settings-panel -->
 						</div><!-- .flow-instance -->
 						</form>
