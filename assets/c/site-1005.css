@@ -134,7 +134,7 @@ em {    font-style: italic;}
 
 .flow-editor-wrapper #vbx-context-menu {	position: relative;}
 
-.flow-editor-wrapper #vbx-context-menu .vbx-menu-items-right {    float: left;	 margin-left: 25px;}
+.flow-editor-wrapper #vbx-context-menu .vbx-menu-items-right {    float: right;}
 
 .flow-editor-wrapper #vbx-context-menu .menu-item {    display: inline;}
 
