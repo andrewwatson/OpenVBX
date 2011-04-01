@@ -125,19 +125,6 @@ class MY_Controller extends Controller
 			if ($style) $this->template->add_css("assets/c/$style");
 		}
 
-		// EXPERIMENTAL
-
-		$CI = &get_instance();
-		$user_id = $CI->session->userdata('user_id');
-		$user_tenant = $CI->session->userdata('tenant');
-
-		if( $user_id != 0) {
-
-			if( $this->tenant->id != $user_tenant ) {
-				$tmp_tenant = $CI->settings->get_tenant_by_id( $user_tenant );
-				redirect( $CI->config->slash_item('base_url'). $tmp_tenant->url_prefix);
-			}
-		}
 		
 	}
 

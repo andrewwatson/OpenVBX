@@ -106,6 +106,11 @@ class Login extends MY_Controller
 				
 				$this->session->set_userdata($userdata);
 
+				if( $this->tenant->id != $user->tenant_id ) {
+					$tmp_tenant = $this->settings->get_tenant_by_id( $user->tenant_id );
+					redirect( $this->config->slash_item('base_url'). $tmp_tenant->url_prefix);
+				}
+
 				if(OpenVBX::schemaVersion() >= 24)
 				{
 					return $this->after_login_completed($user, $redirect);

@@ -449,7 +449,7 @@ $(document).ready(function() {
 	
 	$('.message-row td.message-details-link').click(function() {
 		$(this).parent().addClass('clicked');
-		document.location = OpenVBX.home + 'messages/details/' + $(this).parent().attr('rel');
+		document.location = OpenVBX.home + '/messages/details/' + $(this).parent().attr('rel');
 	});
 
 	$('.select').click(function() {

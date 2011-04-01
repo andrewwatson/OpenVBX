@@ -108,7 +108,8 @@ class MY_Model extends Model
 		$user_id = $ci->session->userdata('user_id');
 		$tenant_id = $ci->session->userdata('tenant');
 
-		if ($user_id != 0) {
+		if (isset($tenant_id) && is_numeric($tenant_id) && !empty($tenant_id)) {
+			error_log("setting tenant_id xx${tenant_id}xx");
 			$search_options["`{$table}`.tenant_id"] = $tenant_id;
 		}
 
