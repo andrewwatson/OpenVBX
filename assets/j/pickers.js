@@ -478,7 +478,7 @@ var Pickers = {
 				}
 
 				swfControl.swfupload({
-					upload_url: OpenVBX.home + '/audiofiles/add_file',
+					upload_url: OpenVBX.home + 'audiofiles/add_file',
 					file_size_limit : "10240",
 					file_types : "*.mp3",
 					file_types_description : "Audio Files",
