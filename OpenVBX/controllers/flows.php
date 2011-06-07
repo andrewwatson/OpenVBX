@@ -75,12 +75,19 @@ class Flows extends User_Controller {
 		$this->respond('Call Flows', 'flows', $data);
 	}
 
+	function delete($flow_id)
+	{
+		return $this->delete($flow_id);
+	}
+
 	function edit($flow_id)
 	{
 		switch($this->request_method)
 		{
 			case 'POST':
 				return $this->save($flow_id);
+
+			// This won't get called anymore, maybe.
 			case 'DELETE':
 				return $this->delete($flow_id);
 			case 'GET':

@@ -57,7 +57,7 @@ $(document).ready(function() {
 				var dialog = this;
 				$.ajax({
 					url : $(activeAnchor).attr('href'),
-					type : 'DELETE',
+					type : 'POST',
 					success : function(data) {
 						if(!data.error) {
 							$.notify('Flow has been deleted');
