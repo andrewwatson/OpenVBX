@@ -100,7 +100,7 @@ if($dial_status)
 {
 	switch($dial_status)
 	{
-		case 'answered':
+		case 'completed':
 			$state[DIAL_ACTION] = DIAL_STATE_HANGUP;
 			break;
 		default:
