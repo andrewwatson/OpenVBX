@@ -77,6 +77,8 @@ class MY_Controller extends Controller
 			$this->config->set_item('index_page', '');
 		}
 
+
+
 		$this->tenant = $this->settings->get_tenant($this->router->tenant);
 		if($this->tenant === false)
 		{
@@ -269,10 +271,6 @@ class MY_Controller extends Controller
 										   'numbers' => 'Assign Call Flows',
 										   'accounts' => 'Users'
 										   );
-
-				if ($this->tenant->id == 1) {
-					$nav['admin_links']['settings/site'] = 'Settings';
-				}
 
 				/* Support plugins that used site_admin */
 				if(!empty($plugin_links['site_admin_links']))
