@@ -121,7 +121,7 @@ while($keepLooping)
 			{
 				// There are still more numbers left to try
 
-				$dial = $response->addDial(array('action' => current_url()));
+				$dial = $response->addDial(array('action' => current_url(), 'timeout' => 25));
 
 				if ($dial_whom_selector === 'user-or-group')
 				{
